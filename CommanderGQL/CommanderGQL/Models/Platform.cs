@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using HotChocolate;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace CommanderGQL.Models

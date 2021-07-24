@@ -7,6 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using GraphQL.Server.Ui.Voyager;
 using CommanderGQL.GraphQL;
+using CommanderGQL.GraphQL.Platforms;
 
 namespace CommanderGQL
 {
@@ -28,6 +29,9 @@ namespace CommanderGQL
             services
                 .AddGraphQLServer()
                 .AddQueryType<Query>()
+                .AddMutationType<Mutation>()
+                .AddType<PlatformType>()
+                //.AddFiltering()
                 .AddProjections();
         }
 
